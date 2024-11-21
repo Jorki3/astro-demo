@@ -1,0 +1,13 @@
+---
+import items from "../data/data.json"; // Archivo JSON con datos
+---
+
+<ul class="list-disc pl-5 text-zinc-50">
+    {
+        items.map((item) => (
+            <li>
+                {item.name} - {item.description}
+            </li>
+        ))
+    }
+</ul>

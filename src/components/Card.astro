@@ -1,27 +1,21 @@
 ---
 interface Props {
+	icon: string;
 	title: string;
-	body: string;
+	description
 }
 
-const { title, body } = Astro.props;
+const { icon,title,description, } = Astro.props;
 ---
 
-<div
-	class="list-none rounded-md bg-zinc-800 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] transition duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-gradient-to-r hover:from-[#7928ca] hover:to-[#ff0080] focus-within:bg-gradient-to-r focus-within:from-[#7928ca] focus-within:to-[#ff0080]"
->
-	<div
-		class="flex w-full flex-col items-start rounded-md bg-[#23262d] p-4 text-white opacity-80 hover:opacity-100 focus:opacity-100"
-	>
-		<h2
-			class="mb-0 text-xl font-medium transition duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-[#ff0080] focus:text-[#ff0080]"
-		>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-
-		<p class="mt-2 text-sm">
-			{body}
-		</p>
+<div class="bg-zinc-700 text-zinc-100 p-6 rounded shadow hover:shadow-lg transition">
+	<div class="text-4xl text-center mb-4">
+		{icon}
 	</div>
+	<h3 class="text-xl font-semibold text-center mb-2">
+		{title}
+	</h3>
+	<p class="text-zinc-50 text-center">
+		{description}
+	</p>
 </div>

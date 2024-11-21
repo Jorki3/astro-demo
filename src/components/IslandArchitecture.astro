@@ -13,21 +13,21 @@ const staticContent = "¡Este contenido es renderizado 100% en HTML!";
             Island Architecture en Acción
         </h2>
 
-        <p class="text-zinc-50">
+        <p class="text-zinc-50 text-justify">
             Descubre cómo Astro te permite construir componentes independientes
             (islas) que mejoran el rendimiento de tu sitio web.
         </p>
     </div>
 
     <div class="my-4">
-        <Card title="Bloque Estático" body={staticContent} />
+        <Card icon="" title="Bloque Estático" description={staticContent} />
     </div>
 
     <!-- Componente Interactivo-->
     <div
         class="my-4 rounded-md bg-zinc-800 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] transition duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] bg-gradient-to-r from-[#7928ca] to-[#ff0080] focus-within:bg-gradient-to-r focus-within:from-[#7928ca] focus-within:to-[#ff0080]"
     >
-        <h3 class="text-xl text-zinc-100 font-semibold mb-2">
+        <h3 class="text-xl text-zinc-100 font-semibold mb-2 text-center">
             Componente Interactivo
         </h3>
 
@@ -38,7 +38,7 @@ const staticContent = "¡Este contenido es renderizado 100% en HTML!";
     <div
         class="my-4 rounded-md bg-zinc-800 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] transition duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] bg-gradient-to-r from-[#7928ca] to-[#ff0080] focus-within:bg-gradient-to-r focus-within:from-[#7928ca] focus-within:to-[#ff0080]"
     >
-        <h3 class="text-xl text-zinc-100 font-semibold mb-2">Contenido Dinámico</h3>
+        <h3 class="text-xl text-zinc-100 font-semibold mb-2 text-center">Contenido Dinámico</h3>
         <DynamicList />
     </div>
 </div>

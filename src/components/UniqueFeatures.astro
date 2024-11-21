@@ -1,0 +1,63 @@
+---
+import Card from "./Card.astro";
+
+const features = [
+    {
+        title: "Island Architecture",
+        description:
+            "Solo carga JavaScript donde es necesario, optimizando el rendimiento.",
+        icon: "🏝️",
+    },
+    {
+        title: "Soporte Multiframework",
+        description:
+            "Combina React, Vue, Svelte, Solid y más en un solo proyecto.",
+        icon: "🔗",
+    },
+    {
+        title: "Cero JS por Defecto",
+        description: "Entrega puro HTML hasta que necesites interactividad.",
+        icon: "⚡",
+    },
+    {
+        title: "Renderizado Estático y Dinámico",
+        description:
+            "Perfecto para contenido estático o dinámico con SSR opcional.",
+        icon: "🌐",
+    },
+];
+---
+
+<div
+    class="list-none rounded-md bg-zinc-800 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] transition duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-gradient-to-r hover:from-[#7928ca] hover:to-[#ff0080] focus-within:bg-gradient-to-r focus-within:from-[#7928ca] focus-within:to-[#ff0080]"
+>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl text-zinc-100 font-bold text-center mb-8">
+            ¿Qué hace único a Astro?
+        </h2>
+        <p class="text-lg text-zinc-50 text-center mb-10">
+            Astro no es solo otro framework; es una revolución en la forma de
+            construir sitios web rápidos y eficientes.
+        </p>
+
+        <!-- Lista de características -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {
+                features.map((feature) => (
+                    <Card icon={feature.icon} title={feature.title} description={feature.description} />
+                ))
+            }
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-10 text-center">
+            <a
+                href="https://docs.astro.build/"
+                target="_blank"
+                class="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+            >
+                Explorar la Documentación
+            </a>
+        </div>
+    </div>
+</div>

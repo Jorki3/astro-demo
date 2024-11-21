@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import Card from "../components/Card.astro";
+import UniqueFeatures from "../components/UniqueFeatures.astro";
 import IslandArchitecture from "../components/IslandArchitecture.astro";
 ---
 
@@ -9,20 +9,7 @@ import IslandArchitecture from "../components/IslandArchitecture.astro";
 	<Hero />
 
 	<main class="container mx-auto px-4 py-8">
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-			<Card
-				title="Rendimiento"
-				body="Astro minimiza el JavaScript en el cliente, entregando solo lo necesario."
-			/>
-			<Card
-				title="Flexibilidad"
-				body="Combina frameworks como React, Vue y Svelte en una misma página."
-			/>
-			<Card
-				title="Facilidad de uso"
-				body="Configuración sencilla, soporte para Markdown y herramientas modernas."
-			/>
-		</div>
+		<UniqueFeatures />
 
 		<section class="my-8">
 			<IslandArchitecture />

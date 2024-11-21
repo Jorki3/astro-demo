@@ -1,0 +1,42 @@
+---
+import Card from "./Card.astro";
+
+import Counter from "./Counter.jsx";
+// import DynamicList from "./DynamicList.astro";
+
+const staticContent = "¡Este contenido es renderizado 100% en HTML!";
+---
+
+<div>
+    <div>
+        <h2 class="text-2xl text-zinc-100 font-bold mb-4">
+            Island Architecture en Acción
+        </h2>
+
+        <p class="text-zinc-50">
+            Descubre cómo Astro te permite construir componentes independientes
+            (islas) que mejoran el rendimiento de tu sitio web.
+        </p>
+    </div>
+
+    <div class="my-4">
+        <Card title="Bloque Estático" body={staticContent} />
+    </div>
+
+    <!-- Componente Interactivo-->
+    <div
+        class="my-4 rounded-md bg-zinc-800 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] transition duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] bg-gradient-to-r from-[#7928ca] to-[#ff0080] focus-within:bg-gradient-to-r focus-within:from-[#7928ca] focus-within:to-[#ff0080]"
+    >
+        <h3 class="text-xl text-zinc-100 font-semibold mb-2">
+            Componente Interactivo
+        </h3>
+        
+        <Counter client:visible />
+    </div>
+
+    <!-- Contenido Dinámico -->
+    <!-- <div class="mb-6 p-6 bg-white rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">Contenido Dinámico</h3>
+        <DynamicList />
+    </div> -->
+</div>

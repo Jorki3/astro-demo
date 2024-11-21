@@ -2,11 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
-
-// import Counter from "./Counter.jsx";
-// import DynamicList from "./DynamicList.astro";
-
-const staticContent = "¡Este contenido es renderizado 100% en HTML!";
+import IslandArchitecture from "../components/IslandArchitecture.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -29,21 +25,7 @@ const staticContent = "¡Este contenido es renderizado 100% en HTML!";
 		</div>
 
 		<section class="my-8">
-			<div>
-				<h2 class="text-2xl text-zinc-100 font-bold mb-4">
-					Island Architecture en Acción
-				</h2>
-
-				<p class="text-zinc-50">
-					Descubre cómo Astro te permite construir componentes
-					independientes (islas) que mejoran el rendimiento de tu
-					sitio web.
-				</p>
-			</div>
-
-			<div class="my-4">
-				<Card title="Bloque Estático" body={staticContent} />
-			</div>
+			<IslandArchitecture />
 		</section>
 	</main>
 </Layout>
